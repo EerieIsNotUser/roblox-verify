@@ -1,12 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        'discord.js': { browser: './empty-module.js' },
-      },
-    },
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
