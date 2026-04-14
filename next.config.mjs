@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
-    config.externals.push('discord.js');
-    return config;
+  experimental: {
+    turbo: {
+      resolveAlias: {
+        'discord.js': { browser: './empty-module.js' },
+      },
+    },
   },
 };
 
